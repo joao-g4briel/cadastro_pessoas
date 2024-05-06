@@ -5,7 +5,7 @@ import Classes.Pessoa;
 
 public class App {
     static Scanner sc = new Scanner(System.in);
-    static ArrayList cadastro = new ArrayList<Pessoa>();
+    static ArrayList<Pessoa> cadastro = new ArrayList<>();
     
     public static void main(String[] args) throws Exception {
        
@@ -26,7 +26,7 @@ public class App {
                         cadastrarPessoa();
                         break;
                     case 2:
-                        
+                        editarPessoa();
                         break;
                     case 3:
                         //listarPessoas();
@@ -63,5 +63,11 @@ public class App {
         System.out.println("Cadastrado com sucesso!");
         System.out.println(pessoa);
 
+    }
+
+    public static void editarPessoa() {
+       for(Pessoa pessoa : cadastro) {
+        System.out.println(pessoa);
+       }
     }
 }
